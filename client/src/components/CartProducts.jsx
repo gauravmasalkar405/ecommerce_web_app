@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Button, IconButton, Typography, styled } from "@mui/material";
+import { Box, IconButton, Typography, styled } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import Products from "./Products";
@@ -75,7 +75,7 @@ const CartProducts = ({ product }) => {
         cartTotal: total,
       })
     );
-  }, [cartItems]);
+  }, [cartItems, dispatch]);
 
   return (
     <CartProductWrapper>

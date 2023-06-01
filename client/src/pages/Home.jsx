@@ -18,7 +18,7 @@ const Home = () => {
   // fetch products
   useEffect(() => {
     dispatch(fetchProducts());
-  }, []);
+  }, [dispatch]);
 
   return (
     <HomeWrapper data-ismobilescreen={isMobileScreen}>

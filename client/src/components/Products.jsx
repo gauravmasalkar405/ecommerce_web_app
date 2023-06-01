@@ -1,5 +1,5 @@
 import React, { memo, useEffect, useState } from "react";
-import { Box, Button, Typography, styled, useMediaQuery } from "@mui/material";
+import { Box, Button, Typography, styled } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { setCartItems } from "../redux/slice/Cart";
 
@@ -27,7 +27,7 @@ const Products = ({ product, isCart, isOutOfStock }) => {
   useEffect(() => {
     const productPresent = cartItems.some((item) => item.id === product.id);
     setIsProductAlreadyInCart(productPresent);
-  }, [cartItems]);
+  }, [cartItems, product.id]);
 
   return (
     <>
